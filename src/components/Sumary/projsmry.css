@@ -1,0 +1,96 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.project-data h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.data-sumary-project {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  font-size: 1.6rem;
+}
+
+.data-sumary-project p {
+  margin-bottom: 2px;
+}
+
+.title-name-user {
+  display: flex;
+  align-items: safe;
+}
+
+.title-name-user h2 {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.title-name-user svg {
+  height: 22px;
+  width: 22px;
+  color: #0d6ef0;
+  margin-right: 10px;
+}
+
+.data-name-score {
+  display: flex;
+}
+
+.data-name-score p {
+  margin-right: 10px;
+}
+
+.score-usuario {
+  display: flex;
+}
+
+.score-usuario p {
+  margin-right: 2px;
+}
+
+.data-location {
+  display: flex;
+}
+
+.data-location p {
+  margin-right: 5px;
+}
+
+.data-contact {
+  display: flex;
+  align-items: last baseline;
+  justify-content: left;
+}
+
+.data-contact p {
+  margin-right: 8px;
+}
+
+.data-sumary-project button {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 430px) {
+  .data-sumary-project p {
+    font-size: 2rem;
+  }
+
+  .data-sumary-project h2 {
+    font-size: 2.4rem;
+  }
+
+  .data-sumary-project button {
+    width: 80vw;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  .title-name-user svg {
+    width: 25px;
+    height: 25px;
+  }
+}

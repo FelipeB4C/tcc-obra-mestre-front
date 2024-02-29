@@ -1,0 +1,118 @@
+.go-to-project {
+  text-decoration: none;
+  color: black;
+}
+
+.project-field {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin-top: 100px;
+  width: 100%;
+  min-width: 430px;
+  max-height: 500px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: rgb(255, 255, 255);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.project-desc {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.contact-client-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.contact-client-info p {
+  margin-bottom: 5px;
+}
+
+.contact-client-info button {
+  max-width: 72%;
+  font-size: 1.6rem;
+}
+
+.contact-client-info svg {
+  width: 20px;
+  height: 20px;
+}
+
+.button-mobile-display {
+  display: none;
+}
+
+@media screen and (max-width: 770px) {
+  .project-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-name h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-client-info {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .contact-client-info p {
+    margin-right: 10px;
+  }
+
+  .contact-client-info button {
+    max-width: 40%;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .project-field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-client-info {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: baseline;
+    margin-top: 10px;
+  }
+
+  .contact-client-info p {
+    margin-right: 14px;
+  }
+
+  .contact-client-info button {
+    display: none;
+  }
+
+  .button-mobile-display {
+    display: block;
+  }
+
+  .button-mobile-display button {
+    width: 100%;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+}

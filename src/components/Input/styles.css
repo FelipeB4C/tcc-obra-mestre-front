@@ -1,0 +1,31 @@
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+
+.input-field label {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.input-field input {
+  height: 32px;
+  margin-top: 8px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 8px;
+  outline-style: none;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: 1.6rem;
+}
+
+.input-field input::placeholder {
+  font-size: 1.6rem;
+}
+
+.input-field input:focus {
+  outline: 2px solid rgb(26, 30, 226);
+}

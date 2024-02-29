@@ -1,0 +1,7 @@
+.score {
+  display: flex;
+}
+
+.score p {
+  margin-left: 6px;
+}

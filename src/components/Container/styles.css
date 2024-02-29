@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-menu {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 430px) {
+  .container-menu {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container-body {
+    width: 90%;
+  }
+}

@@ -1,0 +1,123 @@
+.bio-sumary {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin-top: 80px;
+  width: 100%;
+  min-width: 430px;
+  max-height: 300px;
+  border-radius: 12px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: rgb(255, 255, 255);
+}
+
+.go-to-profile {
+  text-decoration: none;
+  color: black;
+}
+
+.bio-photo-sumary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-photo-sumary img {
+  max-width: 160px;
+  max-height: 160px;
+}
+
+.bio-info-sumary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.nome-nota {
+  display: flex;
+}
+
+.nome-nota h2 {
+  margin-right: 16px;
+}
+
+.nome-nota p {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.nome-nota img {
+  margin-right: 4px;
+}
+
+.resume-sumary {
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.professions-sumary {
+  display: flex;
+}
+
+.professions-sumary p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-right: 16px;
+}
+
+.local-atendimento-sumary {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.local-atendimento-sumary p {
+  font-size: 1.6rem;
+  margin-right: 16px;
+}
+
+.bio-contact-sumary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-contact-sumary p {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.bio-contact-sumary button {
+  max-width: 72%;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 766px) {
+  .bio-sumary {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 98%;
+    height: 100%;
+  }
+
+  .bio-photo-sumary {
+    display: none;
+  }
+
+  .bio-contact-sumary {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bio-contact-sumary p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.loginOut {
+  margin: 150px auto;
+  background: white;
+  padding: 62px 64px;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.loginIn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.loginIn h1 {
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+}
+
+.loginIn form {
+  width: 300px;
+}
+
+.loginIn label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.loginIn input {
+  height: 36px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(122, 122, 122, 0.2);
+  padding: 20px 45px 20px 20px;
+}
+
+.loginIn p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: end;
+  color: #4de157;
+}
+
+.loginIn form a {
+  color: #4de157;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.banner {
+  display: block;
+  height: 512px;
+  width: 508px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.loginIn button {
+  height: 36px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.loginIn a {
+  height: 36px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.inputPassword {
+  margin-top: 15px;
+}
+
+.submit {
+  background-color: #4de157;
+  color: white;
+  border: 2px solid #4de157;
+}
+
+.register {
+  margin-bottom: 30px;
+  background-color: white;
+  color: #4de157;
+  border: 2px solid #4de157;
+}
+
+@media screen and (max-width: 992px) {
+  .loginIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .banner {
+    display: none;
+  }
+
+  .loginOut {
+    box-shadow: none;
+  }
+}

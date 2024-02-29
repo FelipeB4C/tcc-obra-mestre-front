@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cadastro.css" />
+  </head>
+  <body>
+    <div class="menu"></div>
+    <section class="container">
+      <div class="form-field">
+        <h1>Cadastro</h1>
+        <form action="#">
+          <!--RADIO BTN-->
+          <div class="radio-btn">
+            <div>
+              <input
+                type="radio"
+                name="tipo_usuario"
+                id=""
+                value="pessoa_fisica"
+              />
+              <label for="tipo_usuario">Pessoa Física</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="tipo_usuario"
+                id=""
+                value="pessoa_juridica"
+              />
+              <label for="tipo_usuario">Pessoa Jurídica</label>
+            </div>
+          </div>
+
+          <!--INPUTS-->
+          <div class="input-field">
+            <label for="">Nome</label>
+            <input type="text" placeholder="Insira seu nome" />
+          </div>
+          <div class="input-field">
+            <label for="">CPF</label>
+            <input type="text" placeholder="000.000.000-00" />
+          </div>
+          <div class="input-field">
+            <label for="">E-mail</label>
+            <input type="text" placeholder="seuemail@contato.com" />
+          </div>
+          <div class="input-field">
+            <label for="">Senha</label>
+            <input type="password" />
+          </div>
+          <div class="input-field">
+            <label for="">Confirmar senha</label>
+            <input type="password" />
+          </div>
+          <div class="input-field">
+            <label for="">Contato 1</label>
+            <input type="number" placeholder="(XX) 0 0000-0000" />
+          </div>
+          <div class="input-field">
+            <label for="">Contato 2</label>
+            <input type="number" placeholder="(XX) 0 0000-0000" />
+          </div>
+          <div class="input-field">
+            <label for="">Estado</label>
+            <input type="text" />
+          </div>
+          <div class="input-field">
+            <label for="">Cidade</label>
+            <input type="text" />
+          </div>
+
+          <!--BOTÃO-->
+          <button type="submit"></button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

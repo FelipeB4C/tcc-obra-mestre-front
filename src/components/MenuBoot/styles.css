@@ -1,0 +1,69 @@
+nav {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.navbar-brand img {
+  width: 45px;
+  height: 45px;
+}
+
+.navbar-toggler {
+  width: 45px;
+  height: 45px;
+}
+
+.navbar-toggler-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-link:hover {
+  color: #0d6efd;
+}
+
+.nav-link {
+  margin-left: 10px;
+}
+
+.login-btn {
+  width: 100px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 10px;
+  border-radius: 18px;
+}
+
+.register-btn {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 10px;
+  border-radius: 18px;
+}
+
+@media screen and (max-width: 990px) {
+  .login-btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+  }
+
+  .register-btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 430px) {
+  nav {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  a.nav-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}

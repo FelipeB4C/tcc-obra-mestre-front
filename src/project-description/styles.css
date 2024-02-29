@@ -1,0 +1,24 @@
+.project-data {
+  margin-top: 100px;
+  font-size: 1.6rem;
+}
+
+.project-data h2 {
+  font-size: 1.8rem;
+}
+
+.titulo-dados-projeto {
+  display: flex;
+  align-items: safe;
+}
+
+.titulo-dados-projeto svg {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+  color: #0d6ef0;
+}
+
+.project-data h2 {
+  font-size: 1.8rem;
+}

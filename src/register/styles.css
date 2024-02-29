@@ -1,0 +1,112 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.form-field h1 {
+  text-align: center;
+}
+
+.radios-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-input {
+  font-size: 1.6rem;
+}
+
+.flex-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-field .input-field {
+  width: 250px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.form-field form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form-field button {
+  height: 40px;
+  width: 250px;
+  margin: 50px auto;
+}
+
+@media screen and (max-width: 540px) {
+  .flex-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .form-field .input-field {
+    width: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .form-field .input-field input {
+    height: 46px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .form-field h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .form-field form {
+    margin-top: 20px;
+  }
+
+  .form-field input {
+    height: 40px;
+  }
+
+  .radio-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .radio-input input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .radio-input label {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .form-field form > button {
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+  }
+
+  .form-check-label {
+    font-weight: 2.6rem;
+  }
+}

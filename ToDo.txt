@@ -1,0 +1,21 @@
+
+
+
+
+
+validação de campos
+Campo com borda vermelha quando tiver algo errado no input
+
+Arrumar telas para celular
+
+
+Criar tela de cadastro de funcionário
+Colocar funcionalidade que os itens aparecem conforme o que é escolhido nos radios button
+Arrumar campo cidade e estado(Colocar API do IBGE e mudar campo para options)
+
+
+Arrumar tela dentro de projetos (Revisar design)
+Arrumar tela cadastro(Revisar design)
+Arrumar tela projetos(Revisar design)
+Arrumar tela de profissionais(Revisar design)
+Arrumar tela dentro do profissional específico(Revisar design)
