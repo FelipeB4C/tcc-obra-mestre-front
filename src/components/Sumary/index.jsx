@@ -2,6 +2,7 @@ import { Container } from 'react-bootstrap';
 import { Button } from '/src/components/Button';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 export const Sumary = ({ profissional }) => {
   return (
@@ -15,7 +16,7 @@ export const Sumary = ({ profissional }) => {
         >
           <div className="bio-sumary">
             <div className="bio-photo-sumary">
-              <img src="src/img/Foto.png" alt="" />
+              <img src="src/img/usr.png" alt="" />
             </div>
             <div className="bio-info-sumary">
               <div className="nome-nota">
@@ -26,16 +27,16 @@ export const Sumary = ({ profissional }) => {
                 </p>
               </div>
               <div className="professions-sumary">
-                <p>DESIGNER DE INTERIORES</p>
-                <p>ARQUITETA</p>
+                {pro.listProfissao.map((prof) => (
+                  <p key={prof.ocupacao}>{prof.ocupacao}</p>
+                ))}
               </div>
               <p className="resume-sumary">{pro.descricao}</p>
               <div className="local-atendimento-sumary">
                 <p>Locais Atendimento: </p>
-                <p>Online</p>
-                <p>Ceilândia</p>
-                <p>Taguatinga</p>
-                <p>Águas claras</p>
+                {pro.localAtendimento.map((local) => (
+                  <p key={local}>{local}</p>
+                ))}
               </div>
             </div>
             <div className="bio-contact-sumary">

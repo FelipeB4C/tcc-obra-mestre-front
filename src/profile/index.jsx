@@ -3,12 +3,44 @@ import { BioHeader } from '../components/BioHeader';
 import { TitleTopic } from '../components/TitleTopic';
 import { Container } from 'react-bootstrap';
 import { Button } from '../components/Button';
+import { useEffect, useState } from 'react';
 
 import './styles.css';
 
 export const Profile = () => {
   const params = useParams();
   const { id } = params;
+
+  const [idUsuario, setIdUsuario] = useState('');
+  const [idProfissional, setIdProfissional] = useState('');
+  const [cpfOuCnpj, setCpfOuCnpj] = useState('');
+  const [contato2Enable, setFieldEnable] = useState('none');
+  const [listProfissao, setListProfissao] = useState([]);
+  const [descricao, setDescricao] = useState('');
+  const [listLocalAtendimento, setListLocalAtendimento] = useState([]);
+  const [atendimentoOnline, setAtendimentoOnline] = useState(false);
+
+  useEffect(() => {
+    fetch(`http://localhost:8080/profissional/listarUm/${id}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setIdUsuario(data.idUsuario);
+        setIdProfissional(data.idProfissional);
+        setCpfOuCnpj(data.cpfOuCnpj);
+        setListProfissao(data.listProfissao);
+        setDescricao(data.descricao);
+        setListLocalAtendimento(data.localAtendimento);
+        setAtendimentoOnline(data.atendimentoOnline);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(listLocalAtendimento);
 
   return (
     <Container>
@@ -27,7 +59,12 @@ export const Profile = () => {
               src={'/src/img/worktab.svg'}
               title={'Habilidades profissionais'}
             />
-            <p>Engenheira - Crea: 1341-HX</p>
+            {listProfissao.map((prof) => (
+              <p key={prof.ocupacao}>
+                {prof.ocupacao}{' '}
+                {prof.codProfissao && `- Código: ${prof.codProfissao}`}
+              </p>
+            ))}
           </div>
 
           <div className="exp-user">
@@ -35,12 +72,7 @@ export const Profile = () => {
               src={'/src/img/brain.svg'}
               title={'Experiências profissionais'}
             />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-              nisi inventore nostrum, amet officia odit, iure similique soluta
-              accusantium voluptates pariatur debitis excepturi numquam eum esse
-              optio aut a deserunt!
-            </p>
+            <p>{descricao}</p>
           </div>
 
           <div className="places-user">
@@ -48,8 +80,10 @@ export const Profile = () => {
               src={'/src/img/place.svg'}
               title={'Locais que atendo'}
             />
-            <span>Online</span>
-            <span>Todas as regiões do Distrito Federal</span>
+            {atendimentoOnline === true && <span>Online</span>}
+            {listLocalAtendimento.map((local) => (
+              <span key={local}>{local}</span>
+            ))}
           </div>
         </div>
       </div>

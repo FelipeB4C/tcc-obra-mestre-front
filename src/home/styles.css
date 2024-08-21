@@ -1,4 +1,16 @@
-.home-home {
+.App-header {
+  background-color: #282c34;
+  padding: 40px 0;
+  color: white;
   text-align: center;
-  margin-top: 130px;
+}
+
+.features,
+.testimonials {
+  padding: 40px 0;
+}
+
+.App-footer {
+  padding: 20px 0;
+  text-align: center;
 }

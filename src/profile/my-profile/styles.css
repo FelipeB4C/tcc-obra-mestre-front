@@ -1,0 +1,12 @@
+.myProfile {
+  display: flex;
+  justify-content: center;
+  max-width: 80vw;
+  margin: 200px auto;
+}
+
+.row-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

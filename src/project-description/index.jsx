@@ -36,7 +36,7 @@ export const ProjectDescription = () => {
           <FaCircleInfo />
           <h2>Dados do Projeto</h2>
         </div>
-        <h3>Nome do Projeto</h3>
+        <h3>{project.nomeProjeto}</h3>
         <p>{project.descTrabalho}</p>
         <p>
           <b>Data início:</b> {project.dataInicio}

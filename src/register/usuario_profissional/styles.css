@@ -1,0 +1,249 @@
+.form-field-professional {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.form-field-professional h1 {
+  text-align: center;
+}
+
+.radios-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-input {
+  font-size: 1.6rem;
+}
+
+.flex-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-field-professional .input-field {
+  width: 250px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.form-field-professional form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form-field-professional button {
+  height: 40px;
+  width: 250px;
+}
+
+.form-field-bio {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-field-bio .textarea-field {
+  width: 520px;
+}
+
+.form-field-bio textarea {
+  height: 124px;
+}
+
+.atende-online {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 14px;
+}
+
+.atende-online label {
+  width: 200px;
+}
+
+.row-radio-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.select-profissao {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.option-profissao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+
+.option-profissao label {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.option-profissao select {
+  height: 32px;
+  margin-top: 8px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 8px;
+  outline-style: none;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: 1.6rem;
+}
+
+.link-delete {
+  color: rgb(22, 18, 226);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-excluir {
+  color: aliceblue;
+  background-color: blue;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.list-profissao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+.list-profissao li {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-profissao li button {
+  width: 80px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nome-profissao {
+  width: 400px;
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+.form-field-professional .btn-add-profissao {
+  width: 200px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.select-estado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.select-estado select {
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  outline-style: none;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+@media screen and (max-width: 540px) {
+  .flex-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .form-field .input-field {
+    width: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .form-field .input-field input {
+    height: 46px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .form-field h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .form-field form {
+    margin-top: 20px;
+  }
+
+  .form-field input {
+    height: 40px;
+  }
+
+  .radio-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .radio-input input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .radio-input label {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .form-field form > button {
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+  }
+
+  .form-check-label {
+    font-weight: 2.6rem;
+  }
+}

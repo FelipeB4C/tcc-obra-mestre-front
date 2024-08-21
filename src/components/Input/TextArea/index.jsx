@@ -1,29 +1,23 @@
 import './styles.css';
 
-export const Input = ({
+export const TextArea = ({
   label,
-  type,
   name,
-  value,
   id,
   placeholder,
   handleOnChange,
   required,
-  disabled,
 }) => {
   return (
-    <div className="input-field">
+    <div className="textarea-field">
       <label htmlFor="">{label}</label>
-      <input
-        type={type}
+      <textarea
         name={name}
         id={id}
-        value={value}
         placeholder={placeholder}
         onChange={handleOnChange}
         required={required}
-        disabled={disabled}
-      />
+      ></textarea>
     </div>
   );
 };

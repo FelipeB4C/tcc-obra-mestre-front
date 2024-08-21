@@ -8,16 +8,10 @@ export const BioHeader = ({ id }) => {
   const [idUsuario, setIdUsuario] = useState('');
   const [idProfissional, setIdProfissional] = useState('');
   const [nome, setNome] = useState('');
-  const [tipoUsuario, setTipoUsuario] = useState('');
-  const [cpfOuCnpj, setCpfOuCnpj] = useState('');
   const [email, setEmail] = useState('');
   const [contato1, setContato1] = useState('');
   const [contato2, setContato2] = useState('');
   const [contato2Enable, setFieldEnable] = useState('none');
-  const [listProfissao, setListProfissao] = useState([]);
-  const [descricao, setDescricao] = useState('');
-  const [listLocalAtendimento, setListLocalAtendimento] = useState([]);
-  const [atendimentoOnline, setAtendimentoOnline] = useState(false);
   const [avaliacaoProfissional, setAvaliacaoProfissional] = useState(0);
   const [numAvaliacoes, setNumAvaliacoes] = useState(0);
   const [estado, setEstado] = useState('');
@@ -35,17 +29,11 @@ export const BioHeader = ({ id }) => {
         setIdUsuario(data.idUsuario);
         setIdProfissional(data.idProfissional);
         setNome(data.nome);
-        setTipoUsuario(data.tipoUsuario);
-        setCpfOuCnpj(data.cpfOuCnpj);
         setEmail(data.email);
         setContato1(data.contato1);
         if (data.contato2) {
           setContato2(data.contato2);
         }
-        setListProfissao(data.listProfissao);
-        setDescricao(data.descricao);
-        setListLocalAtendimento(data.listLocalAtendimento);
-        setAtendimentoOnline(data.atendimentoOnline);
         setAvaliacaoProfissional(data.avaliacaoProfissional);
         setEstado(data.estado);
         setCidade(data.cidade);
@@ -57,8 +45,11 @@ export const BioHeader = ({ id }) => {
     <Container>
       <div className="colorHeader"></div>
       <div className="containerIn">
+        <div className="user-img-mobile">
+          <img className="imgUser" src="/src/img/Foto.png" alt="" />
+        </div>
         <header className="headerBio">
-          <div>
+          <div className="user-img">
             <img className="imgUser" src="/src/img/Foto.png" alt="" />
           </div>
           <div className="info">
@@ -67,7 +58,7 @@ export const BioHeader = ({ id }) => {
             <p>
               {estado} - {cidade}
             </p>
-            <Score score={avaliacaoProfissional} numAvaliacao={'375'} />
+            <Score score={avaliacaoProfissional} numAvaliacao={numAvaliacoes} />
           </div>
 
           <div className="divisoria"></div>

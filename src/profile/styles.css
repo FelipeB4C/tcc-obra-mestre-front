@@ -30,3 +30,24 @@
 .places-user {
   margin-top: 50px;
 }
+
+.places-user span {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 430px) {
+  .body-profile {
+    width: 100%;
+    margin: 120px auto;
+  }
+
+  .buttons-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .buttons-profile button {
+    margin-left: 0px;
+  }
+}

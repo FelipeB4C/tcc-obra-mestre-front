@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Sumary } from '../components/Sumary';
+const token = localStorage.getItem('token');
 
 export const Professionals = () => {
   const [listProfessionals, setListProfessionals] = useState([]);

@@ -2,8 +2,11 @@ import { Button, Container, Nav, Navbar, NavbarBrand } from 'react-bootstrap';
 
 import './styles.css';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../../AuthProvider';
 
 export const MenuBoot = () => {
+  const { isAuthenticated, logout } = useAuth();
+
   return (
     <Navbar
       collapseOnSelect
@@ -27,22 +30,41 @@ export const MenuBoot = () => {
             <Nav.Link as={Link} to="/projects">
               Ache Projetos
             </Nav.Link>
-            <Button
-              className="register-btn"
-              variant="outline-primary"
-              as={Link}
-              to="/register"
-            >
-              Cadastre-se
-            </Button>
-            <Button
-              className="login-btn"
-              variant="primary"
-              as={Link}
-              to="/login"
-            >
-              Login
-            </Button>
+            {isAuthenticated ? (
+              <>
+                <Button
+                  className="login-btn"
+                  variant="primary"
+                  as={Link}
+                  to="/myprofile"
+                >
+                  Meu perfil
+                </Button>
+                <Nav.Link variant="outline-danger" onClick={logout}>
+                  Sair
+                </Nav.Link>
+              </>
+            ) : (
+              <>
+                <Button
+                  className="register-btn"
+                  variant="outline-primary"
+                  as={Link}
+                  to="/register"
+                >
+                  Cadastre-se
+                </Button>
+
+                <Button
+                  className="login-btn"
+                  variant="primary"
+                  as={Link}
+                  to="/login"
+                >
+                  Login
+                </Button>
+              </>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

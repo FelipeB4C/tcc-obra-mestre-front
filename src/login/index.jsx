@@ -3,37 +3,47 @@ import { Input } from '../components/Input';
 import './styles.css';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../AuthProvider';
+import { jwtDecode } from 'jwt-decode';
 
 export const Login = () => {
   const navigate = useNavigate();
   const [token, setToken] = useState('');
+  const { login } = useAuth();
 
-  function doLogin(login) {
+  function doLogin(credentials) {
     fetch('http://localhost:8080/auth/login', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
       },
-      body: JSON.stringify(login),
+      body: JSON.stringify(credentials),
     })
       .then((resp) => resp.json())
       .then((data) => {
         setToken(data.token);
         localStorage.setItem('token', data.token);
+        takeEmailFromToken(data);
+        login();
         navigate('/', { message: 'Projeto criado com sucesso!' });
       })
       .catch((err) => console.log(err));
   }
 
-  const [login, setLogin] = useState({});
+  function takeEmailFromToken(data) {
+    const decodedToken = jwtDecode(data.token);
+    localStorage.setItem('sub', decodedToken.sub);
+  }
+
+  const [credentials, setCredentials] = useState({});
 
   const submit = (e) => {
     e.preventDefault();
-    doLogin(login);
+    doLogin(credentials);
   };
 
   function handleChange(e) {
-    setLogin({ ...login, [e.target.name]: e.target.value });
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
   }
 
   return (

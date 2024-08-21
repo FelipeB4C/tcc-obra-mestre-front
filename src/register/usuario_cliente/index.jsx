@@ -1,5 +1,5 @@
 import './styles.css';
-import { Input } from '../components/Input';
+import { Input } from '../../components/Input';
 import { Button, Container, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -8,23 +8,35 @@ export const Register = () => {
   const navigate = useNavigate();
 
   function registerUser(usuario) {
-    fetch(
-      'http://localhost:8080/usuario/cadastrar',
-      {
-        method: 'POST',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(usuario),
+    fetch('http://localhost:8080/usuario/cadastrar', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
       },
-      [],
-    )
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        navigate('/', { message: 'Projeto criado com sucesso!' });
+      body: JSON.stringify(usuario),
+    })
+      .then((resp) => {
+        console.log('Resposta da API:', resp); // Log da resposta completa
+        if (resp.ok) {
+          const location = resp.headers.get('Location');
+          console.log('Cabeçalho Location:', location); // Log do cabeçalho Location
+          if (location) {
+            const userId = location.split('/').pop(); // Extrai o ID da URI
+            console.log('ID do usuário:', userId); // Log do ID do usuário
+            return userId;
+          } else {
+            throw new Error('Cabeçalho Location não encontrado');
+          }
+        } else {
+          throw new Error('Erro ao cadastrar usuário');
+        }
       })
-      .catch((err) => console.log(err));
+      .then((userId) => {
+        navigate(`/register/professional/${userId}`, {
+          state: { message: 'Usuário criado com sucesso!' },
+        });
+      })
+      .catch((err) => console.log('Erro:', err));
   }
 
   const [usuario, setUsuario] = useState({});

@@ -1,0 +1,35 @@
+.textarea-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+
+.textarea-field label {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.textarea-field textarea {
+  min-height: 62px;
+  margin-top: 8px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border: none;
+  border-radius: 8px;
+  outline-style: none;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  font-size: 1.6rem;
+}
+
+.textarea-field textarea::placeholder {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.textarea-field textarea:focus {
+  outline: 2px solid rgb(26, 30, 226);
+}

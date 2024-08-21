@@ -1,8 +1,8 @@
 import './styles.css';
 
-export const Button = ({ srcIcon, alt, label }) => {
+export const Button = ({ srcIcon, alt, label, type }) => {
   return (
-    <button className="ownbtn">
+    <button type={type} className="ownbtn">
       <img className="icBtn" src={srcIcon} alt={alt} />
       {label}
     </button>
