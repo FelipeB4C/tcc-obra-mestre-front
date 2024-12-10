@@ -72,6 +72,29 @@ export const Register = () => {
     }
   }
 
+  const formatPhoneNumber = (value) => {
+    if (!value) return value;
+    const phoneNumber = value.replace(/\D/g, ''); // Remove tudo que não for número
+    const phoneNumberLength = phoneNumber.length;
+
+    if (phoneNumberLength < 3) return phoneNumber;
+    if (phoneNumberLength < 7)
+      return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2)}`;
+    if (phoneNumberLength <= 11)
+      return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 7)}-${phoneNumber.slice(7, 11)}`;
+    return `(${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 7)}-${phoneNumber.slice(7, 11)}`;
+  };
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    const formattedValue =
+      name === 'contato1' || name === 'contato2'
+        ? formatPhoneNumber(value)
+        : value;
+
+    setUsuario({ ...usuario, [name]: formattedValue });
+  }
+
   return (
     <Container>
       <div className="form-field">
@@ -174,16 +197,18 @@ export const Register = () => {
           <div className="flex-inputs">
             <Input
               label={'Contato 1'}
-              type={'number'}
+              type={'text'}
               name={'contato1'}
+              value={usuario.contato1 || ''}
               placeholder={'(00) 0 0000-0000'}
               handleOnChange={handleChange}
               required
             />
             <Input
               label={'Contato 2 (Opcional)'}
-              type={'number'}
+              type={'text'}
               name={'contato2'}
+              value={usuario.contato2 || ''}
               placeholder={'(00) 0 0000-0000'}
               handleOnChange={handleChange}
             />

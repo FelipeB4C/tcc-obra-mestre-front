@@ -16,6 +16,8 @@ import { Copilot } from './register/teste_copilot';
 import { RegisterProject } from './register/projeto';
 import { AuthProvider } from './AuthProvider';
 import { MyProfile } from './profile/my-profile';
+import { MyProjects } from './components/Project/my-project';
+import { MyProjectsWork } from './components/Project/my-project-work';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -29,6 +31,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/myprofile" element={<MyProfile />} />
           <Route path="/professionals" element={<Professionals />} />
           <Route path="/copilot" element={<Copilot />} />
+          <Route path="/myprojects/:id" element={<MyProjects />} />
+          <Route path="/myprojectswork/:id" element={<MyProjectsWork />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/register" element={<Register />} />
           <Route

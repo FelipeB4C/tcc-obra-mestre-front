@@ -180,7 +180,7 @@ export const RegisterProfessional = () => {
     <Container>
       <div className="form-field-professional">
         <h1>Cadastro de dados profissionais</h1>
-        <form onSubmit={submit} autoComplete="off">
+        <form onSubmit={submit} autoComplete="off" className='form-professional'>
           <div className="select-profissao">
             <div className="option-profissao">
               <label htmlFor="opcoes">Escolha profissao:</label>
@@ -277,7 +277,7 @@ export const RegisterProfessional = () => {
                 ))}
               </select>
             </div>
-            <div>
+            <div className='select-cidade'>
               <label htmlFor="">Escolha uma cidade:</label>
               <select
                 onChange={(e) => setCidadeSelecionada(e.target.value)}
@@ -292,7 +292,7 @@ export const RegisterProfessional = () => {
               </select>
             </div>
 
-            <ul>
+            <ul className='list-cidades'>
               {listaCidades.map((cidade) => (
                 <li key={cidade}>
                   <Button
@@ -301,7 +301,9 @@ export const RegisterProfessional = () => {
                   >
                     Deletar
                   </Button>
-                  {cidade}
+                  <div>
+                    {cidade}
+                  </div>
                 </li>
               ))}
             </ul>

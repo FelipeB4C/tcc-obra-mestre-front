@@ -1,0 +1,13 @@
+.ocupacoes {
+    margin-top: 10px;
+}
+
+.form-filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#formEstado {
+    width: 100px;
+}

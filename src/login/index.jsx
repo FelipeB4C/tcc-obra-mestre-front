@@ -24,6 +24,7 @@ export const Login = () => {
         setToken(data.token);
         localStorage.setItem('token', data.token);
         takeEmailFromToken(data);
+        takeIdProfissionalFromToken(data);
         login();
         navigate('/', { message: 'Projeto criado com sucesso!' });
       })
@@ -33,6 +34,14 @@ export const Login = () => {
   function takeEmailFromToken(data) {
     const decodedToken = jwtDecode(data.token);
     localStorage.setItem('sub', decodedToken.sub);
+  }
+
+  function takeIdProfissionalFromToken(data) {
+    const decodedToken = jwtDecode(data.token);
+    console.log(jwtDecode(data.token))
+    const idProfissional = decodedToken.id_profissional || null; // Decodifica o campo idProfissional
+    localStorage.setItem('id_profissional', idProfissional); // Armazena no localStorage
+  
   }
 
   const [credentials, setCredentials] = useState({});

@@ -74,6 +74,7 @@ export const RegisterProject = () => {
     const projectBuild = {
       nomeProjeto: projeto.nomeProjeto,
       descTrabalho: projeto.descTrabalho,
+      ocupacao: projeto.ocupacao,
       dataInicio: data,
       estado: estadoSelecionado,
       cidade: cidadeSelecionada,
@@ -99,22 +100,43 @@ export const RegisterProject = () => {
 
   return (
     <Container>
-      <div className="form-field">
+      <div className="form-field-projeto">
         <h1>Cadastro de Projeto</h1>
         <form onSubmit={submit}>
-          <Input
-            label={'Título do projeto'}
-            type={'text'}
-            name="nomeProjeto"
-            placeholder={'Um breve resumo'}
-            handleOnChange={handleChange}
-            required
-          />
-          <Input
-            label={'Data de início da obra'}
-            type={'date'}
-            handleOnChange={handleDateChange}
-          />
+          <div className='projeto-data'>
+            <Input
+              className="form-nome-projeto"
+              label={'Título do projeto'}
+              type={'text'}
+              name="nomeProjeto"
+              placeholder={'Um breve resumo'}
+              handleOnChange={handleChange}
+              required
+            />
+            <Input
+              label={'Data de início da obra'}
+              type={'date'}
+              handleOnChange={handleDateChange}
+            />
+
+            <div className="form-ocupacao-projeto">
+              <label htmlFor="ocupacao">Profissional necessário</label>
+              <select
+                id="ocupacao"
+                name="ocupacao"
+                onChange={handleChange}
+                required
+              >
+                <option value="">Selecione um profissional...</option>
+                <option value="0">Pedreiro</option>
+                <option value="1">Eletricista</option>
+                <option value="2">Designer de Interiores</option>
+                <option value="3">Arquiteto</option>
+                <option value="4">Engenheiro</option>
+              </select>
+            </div>
+          </div>
+
           <TextArea
             label={'Descrição do projeto'}
             type={'text'}
@@ -134,7 +156,9 @@ export const RegisterProject = () => {
                 <option value="">Selecione...</option>
                 {estados.map((estado) => (
                   <option key={estado.id} value={estado.nome}>
-                    {estado.nome}
+                    <div>
+                      {estado.nome}
+                    </div>
                   </option>
                 ))}
               </select>
@@ -144,11 +168,14 @@ export const RegisterProject = () => {
               <select
                 onChange={(e) => setCidadeSelecionada(e.target.value)}
                 value={cidadeSelecionada}
+                className='cidade-cidade'
               >
                 <option value="">Selecione...</option>
                 {cidades.map((cidade) => (
                   <option key={cidade.id} value={cidade.nome}>
-                    {cidade.nome}
+                    <div>
+                      {cidade.nome}
+                    </div>
                   </option>
                 ))}
               </select>

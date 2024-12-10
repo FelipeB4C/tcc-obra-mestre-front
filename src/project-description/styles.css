@@ -22,3 +22,21 @@
 .project-data h2 {
   font-size: 1.8rem;
 }
+
+.interessados {
+
+}
+
+.interessados h3 {
+  text-align: center;
+}
+
+.interessados .bio-photo-sumary img{
+  width: 48px;
+  height: 48px;
+}
+
+.interessados .nome-nota img {
+  width: 16px;
+  height: 16px;
+}

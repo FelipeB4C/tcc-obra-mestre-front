@@ -146,6 +146,16 @@ export const MyProfile = () => {
     navigate(`/register/professional/${user.id}`);
   };
 
+  const handleListProjectClick = () => {
+    console.log(user.id)
+    navigate(`/myprojects/${user.id}`);
+  };
+
+  const handleListProjectWorkClick = () => {
+    console.log(user.id)
+    navigate(`/myprojectswork/${user.id}`);
+  };
+
   const navCreateProject = () => {
     navigate(`/register/project/${user.id}`);
   };
@@ -154,24 +164,33 @@ export const MyProfile = () => {
     <Container>
       <Row className="myProfile">
         <Col md={2}>
-          <ListGroup>
-            <ListGroup.Item action onClick={navCreateProfessional}>
+          <div className="options-menu">
+            <Button variant="link" onClick={navCreateProfessional} className="menu-item">
               Cadastrar dados profissionais
-            </ListGroup.Item>
-            <ListGroup.Item action onClick={navCreateProject}>
+            </Button>
+            <Button variant="link" onClick={navCreateProject} className="menu-item">
               Cadastrar projetos
-            </ListGroup.Item>
-            <ListGroup.Item action onClick={handleEditClick}>
+            </Button>
+            <Button variant="link" onClick={handleEditClick} className="menu-item">
               Atualizar Dados
-            </ListGroup.Item>
-            <ListGroup.Item action onClick={handleDeleteClick}>
+            </Button>
+            <Button variant="link" onClick={handleEditClick} className="menu-item">
+              Atualizar Dados Profissionais
+            </Button>
+            <Button variant="link" onClick={handleListProjectClick} className="menu-item">
+              Meus projetos criados
+            </Button>
+            <Button variant="link" onClick={handleListProjectWorkClick} className="menu-item">
+              Meus projetos trabalhados
+            </Button>
+            <Button variant="link" onClick={handleDeleteClick} className="menu-item">
               Deletar Conta
-            </ListGroup.Item>
-          </ListGroup>
+            </Button>
+          </div>
         </Col>
         <Col md={8}>
           <Card>
-            <Card.Header>Perfil do Usuário</Card.Header>
+            <Card.Header><h3>Perfil do Usuário</h3></Card.Header>
             <Card.Body>
               <Form className="card-inputs">
                 <Row className="row-input">

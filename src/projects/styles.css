@@ -1,0 +1,54 @@
+.projects-container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  
+  .occupations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 60px;
+    margin-left: 30px;
+  }
+
+  .sidebar h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .profession-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .profession-list li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .profession-list li:hover {
+    background-color: #e9ecef;
+  }
+  
+  .profession-list li.selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .form-filter {
+    margin-bottom: 20px;
+  }
+  
+  .project-field {
+    margin-top: 20px;
+  }
+  

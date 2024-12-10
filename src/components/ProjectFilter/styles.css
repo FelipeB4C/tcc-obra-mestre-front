@@ -1,0 +1,21 @@
+.form-filter-project {
+    margin-top: 90px;
+}
+
+.nome-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+    justify-self: center;
+}
+
+.nome-projeto input {
+    width: 650px;
+    height: 35px;
+}
+
+.cidade-estado-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

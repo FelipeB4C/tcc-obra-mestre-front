@@ -1,0 +1,72 @@
+.professionals-page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.sidebar {
+  background-color: #f8f9fa; /* Cor de fundo para destacar a barra lateral */
+  padding: 20px;
+  border-right: 1px solid #ddd; /* Linha divisória */
+  min-height: 100vh;
+}
+
+.content {
+  padding: 20px;
+  flex: 1; /* O conteúdo ocupa o restante do espaço */
+}
+
+.group-estado-cidade {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.buttonFilter {
+  margin-top: 25px;
+}
+
+
+#formEstado, #formCidade {
+  height: 40px;
+  width: 300px; /* Ajusta a largura para que fiquem lado a lado */
+
+}
+
+button {
+  height: 40px;
+  margin-top: 20px;
+}
+
+.sidebar label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.sidebar input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .professionals-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Ajusta a largura dos campos para tela pequena */
+  .group-estado-cidade {
+    flex-direction: column; /* Coloca os campos em coluna */
+  }
+
+  #formEstado, #formCidade {
+    width: 100%; /* Torna os campos de entrada de 100% para telas pequenas */
+  }
+}

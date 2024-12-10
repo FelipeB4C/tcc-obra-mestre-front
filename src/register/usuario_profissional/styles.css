@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.select-profissao {
+  margin-top: 50px;
+}
+
 .form-field-professional h1 {
   text-align: center;
 }
@@ -43,6 +47,7 @@
 .form-field-bio {
   display: flex;
   justify-content: space-around;
+  margin-top: 20px;
 }
 
 .form-field-bio .textarea-field {
@@ -128,7 +133,7 @@
 .list-profissao {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 30px;
   font-size: 14px;
 }
 
@@ -152,6 +157,7 @@
   width: 400px;
   margin-left: 30px;
   font-size: 16px;
+  margin-top: 15px;
 }
 
 .form-field-professional .btn-add-profissao {
@@ -166,6 +172,15 @@
   flex-direction: column;
   justify-content: space-between;
   font-size: 16px;
+  margin-top: 24px;
+}
+
+.option-cidade select {
+  margin-left: 16px;
+}
+
+.select-cidade select {
+  margin-left: 16px;
 }
 
 .select-estado select {
@@ -176,6 +191,26 @@
   box-shadow:
     rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.select-cidade {
+  margin-top: 24px;
+}
+
+.list-cidades {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-cidades li {
+  display: flex;
+  align-items: baseline;
+}
+
+.list-cidades button {
+    height: 35px;
+    width: 80px;
+    margin-right: 20px;
 }
 
 @media screen and (max-width: 540px) {
